@@ -31,7 +31,7 @@
           <form method="post" action="{% url 'user_sessions:session_delete' object.pk %}">
             {% csrf_token %}
             {% if object.session_key == session_key %}
-              <button type="submit" class="btn btn-xs btn-link">{% trans "End Session" %}</button>
+
             {% else %}
               <button type="submit" class="btn btn-xs btn-warning">{% trans "End Session" %}</button>
             {% endif %}
